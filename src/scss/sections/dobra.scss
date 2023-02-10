@@ -1,0 +1,65 @@
+.dobra {
+  padding-top: 60px;
+  padding-bottom: 85px;
+  @media (max-width: $mobile) {
+    padding: 40px 0;
+  }
+  // .dobra__container
+  &__container {
+    max-width: rem(1256);
+  }
+  // .dobra__title
+  &__title {
+    text-align: center;
+    @include adaptiveValue('margin-bottom', 117, 40);
+    @media (max-width: $pc) {
+      margin-bottom: 30px;
+    }
+  }
+  // .dobra__flex-wrap
+  &__flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 94px;
+    @media (max-width: $pc) {
+      gap: 20px 34px;
+    }
+  }
+  // .dobra__item
+  &__item {
+  }
+}
+
+.item-dobra {
+  width: calc(33.3% - 62.66px);
+  @media (max-width: $pc) {
+    width: calc(33.3% - 22.66px);
+  }
+  @media (max-width: $mobile) {
+    width: calc(50% - 17px);
+  }
+  @media (max-width: $mobileSmall) {
+    width: 100%;
+  }
+  // .item-dobra__image
+  &__image {
+    @include adaptiveValue('max-width', 200, 100);
+    margin: 0 auto;
+    @media (max-width: $pc) {
+      width: 150px;
+    }
+    @media (max-width: $mobile) {
+      width: 100px;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+  // .item-dobra__text
+  &__text {
+    @include adaptiveValue('font-size', 36, 18);
+    line-height: 125%; /* 45/36 */
+    text-align: center;
+  }
+}

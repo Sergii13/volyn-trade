@@ -1,0 +1,88 @@
+.contact {
+  background: #529138;
+  mix-blend-mode: normal;
+  padding: 50px 0 60px;
+  @media (max-width: $mobile) {
+    padding: 40px 0;
+  }
+  // .contact__container
+  &__container {
+    max-width: rem(1480);
+  }
+  // .contact__title
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    line-height: 120%;
+    margin-bottom: 32px;
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+  }
+  // .contact__form
+  &__form {
+  }
+}
+.form {
+  // .form__inpurs
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 26px;
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .input {
+      max-width: rem(426);
+      @media (max-width: $tablet) {
+        max-width: calc(50% - 10px);
+      }
+      @media (max-width: $mobile) {
+        max-width: 100%;
+      }
+    }
+  }
+  // .form__bottom
+  &__bottom {
+    max-width: 870px;
+    margin: 0 auto;
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
+  }
+  // .form__row
+  &__row {
+    margin-top: rem(30);
+    display: flex;
+    align-items: center;
+    gap: rem(55);
+    @media (max-width: $mobile) {
+      gap: rem(20);
+    }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column-reverse;
+    }
+  }
+  // .form__button
+  &__button {
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+}
+.input {
+}
+.checkbox {
+  // .checkbox__input
+  &__input {
+  }
+  // .checkbox__label
+  &__label {
+  }
+  // .checkbox__text
+  &__text {
+  }
+}
