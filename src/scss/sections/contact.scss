@@ -35,14 +35,27 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-    .input {
-      max-width: rem(426);
-      @media (max-width: $tablet) {
-        max-width: calc(50% - 10px);
-      }
-      @media (max-width: $mobile) {
-        max-width: 100%;
-      }
+  }
+  &__error {
+    color: red;
+    margin-top: rem(5);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 14px;
+  }
+  &__textarea-wrap {
+    position: relative;
+  }
+  &__item {
+    position: relative;
+    max-width: rem(426);
+    width: 100%;
+    @media (max-width: $tablet) {
+      max-width: calc(50% - 10px);
+    }
+    @media (max-width: $mobile) {
+      max-width: 100%;
     }
   }
   // .form__bottom

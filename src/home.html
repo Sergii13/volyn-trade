@@ -266,38 +266,59 @@
         <section class="contact">
           <div class="contact__container">
             <h2 class="contact__title">Skontaktuj się z nami</h2>
-            <form action="#" class="contact__form form">
+            <form
+              data-popup-message="#popup"
+              data-ajax
+              action="files/sendmail.php"
+              method="POST"
+              class="contact__form form"
+            >
               <div class="form__inputs">
-                <input
-                  autocomplete="off"
-                  type="text"
-                  name="form[]"
-                  data-error="Field required or uncorrect"
-                  placeholder="Nazwa"
-                  class="input"
-                />
-                <input
-                  autocomplete="off"
-                  type="text"
-                  name="form[]"
-                  data-error="Field required or uncorrect"
-                  placeholder="E-mail"
-                  class="input"
-                />
-                <input
-                  autocomplete="off"
-                  type="Telefon"
-                  name="form[]"
-                  data-error="Field required or uncorrect"
-                  placeholder="Telefon"
-                  class="input"
-                />
+                <div class="form__item">
+                  <input
+                    data-required
+                    autocomplete="off"
+                    type="text"
+                    name="name"
+                    data-error="Field required or uncorrect"
+                    placeholder="Nazwa"
+                    class="input"
+                  />
+                </div>
+
+                <div class="form__item">
+                  <input
+                    data-required="email"
+                    autocomplete="off"
+                    type="text"
+                    name="email"
+                    data-error="Field required or uncorrect"
+                    placeholder="E-mail"
+                    class="input"
+                  />
+                </div>
+                <div class="form__item">
+                  <input
+                    data-required
+                    autocomplete="off"
+                    type="Telefon"
+                    name="telefon"
+                    data-error="Field required or uncorrect"
+                    placeholder="Telefon"
+                    class="input"
+                  />
+                </div>
               </div>
               <div class="form__bottom">
-                <textarea
-                  class="input"
-                  placeholder="Twoja wiadomość"
-                ></textarea>
+                <div class="form__textarea-wrap">
+                  <textarea
+                    data-required
+                    class="input"
+                    name="message"
+                    data-error="Field required or uncorrect"
+                    placeholder="Twoja wiadomość"
+                  ></textarea>
+                </div>
                 <div class="form__row">
                   <button class="form__button button">
                     <img src="@img/svg/send.svg" alt="" />
@@ -305,8 +326,10 @@
                   </button>
                   <div class="checkbox">
                     <input
+                      checked
+                      data-required
                       id="c_1"
-                      data-error="Ошибка"
+                      data-error="Field required or uncorrect"
                       class="checkbox__input"
                       type="checkbox"
                       value="1"
